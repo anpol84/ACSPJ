@@ -6,31 +6,16 @@ public class Answer implements Serializable {
     private Double a;
     private Double b;
     private boolean error;
-
     public boolean getError() {
         return error;
     }
-
     public void setError(boolean error) {
         this.error = error;
     }
-
-    public Double getA() {
-        return a;
-    }
-
-    public void setA(Double a) {
-        this.a = a;
-    }
-
-    public Double getB() {
-        return b;
-    }
-
-    public void setB(Double b) {
-        this.b = b;
-    }
-
+    public Double getA() {return a;}
+    public void setA(Double a) {this.a = a;}
+    public Double getB() {return b;}
+    public void setB(Double b) {this.b = b;}
     @Override
     public String toString() {
         if (error){

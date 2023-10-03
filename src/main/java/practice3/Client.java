@@ -7,13 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) {
@@ -27,7 +21,6 @@ public class Client {
             getMessage.start();
             while(true) {
                 message = input.readLine();
-
                 output.println(message);
 
             }
@@ -37,7 +30,7 @@ public class Client {
     }
 
     private static class GetMessage implements Runnable{
-        private BufferedReader input;
+        private final BufferedReader input;
         public GetMessage(BufferedReader input){
             this.input = input;
         }

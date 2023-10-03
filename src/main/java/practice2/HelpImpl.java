@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 
 public class HelpImpl implements Help{
     @Override
-    public Answer solveTask(int a, int b, int c) throws RemoteException {
+    public Answer solveTask(double a, double b, double c) throws RemoteException {
         Answer answer = new Answer();
         if (a == 0 && b == 0 && c == 0){
             return answer;
@@ -14,7 +14,6 @@ public class HelpImpl implements Help{
             return answer;
         }
         if (a == 0){
-
             answer.setA(-c/(double)b);
             return answer;
         }

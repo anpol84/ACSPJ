@@ -13,7 +13,6 @@ import java.util.List;
 public class Server {
     private static List<PrintWriter> clients = new ArrayList<>();
     private static List<String> messages = new ArrayList<>();
-
     private static class MessageWriter implements Runnable{
         @Override
         public void run() {

@@ -25,4 +25,23 @@ public class Client {
             }
         }
     }
+    public static double[] parseNumbers(String input) throws NumberFormatException {
+        try {
+            String[] splitInput = input.split(" ");
+            if (splitInput.length != 3) {
+                throw new IllegalArgumentException("Input string should contain 3 numbers separated by spaces");
+            }
+            double[] numbers = new double[3];
+            try {
+                numbers[0] = Double.parseDouble(splitInput[0]);
+                numbers[1] = Double.parseDouble(splitInput[1]);
+                numbers[2] = Double.parseDouble(splitInput[2]);
+            } catch (NumberFormatException e) {
+                throw new NumberFormatException("Invalid number format in input string");
+            }
+            return numbers;
+        }catch (NullPointerException e){
+            throw new NullPointerException("Input string is null");
+        }
+    }
 }
